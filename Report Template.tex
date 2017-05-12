@@ -1,0 +1,84 @@
+%Template Author: ZHENG Zimu, HKPolyU
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[english]{babel}
+\usepackage[pdftex]{graphicx}%for figure
+\usepackage{bm}
+
+\usepackage[margin=1.9cm,nohead]{geometry}
+\usepackage{amsfonts} %mathbb
+
+%start of header keys
+\newcommand{\hoofding}{
+\hspace{-2cm}
+\begin{flushleft}
+\includegraphics[height=2cm]{polyu_logo.jpg}
+\end{flushleft}
+\vspace{-1.5cm}
+%\vspace{-3cm}
+\hspace{9cm}
+\parbox{7cm}{Author Name(s)}
+%\vspace{1cm}\hspace{-2cm}
+%\includegraphics[height=2cm]{poly-simple.png}
+
+%Insert blank line as to be seen as section
+{\parindent=0pt \hrulefill} 
+
+\vspace{5mm}}
+%end of header keys
+
+%thus there is no indentation in a new paragraph
+\setlength{\parindent}{0pt}
+%the spacing between paragraphs will be slightly larger
+\setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
+
+
+
+\begin{document}
+\hoofding
+
+%below, type the title
+\begin{center}
+\LARGE{\textbf{[Report] \\Report Title}}
+\end{center}
+			
+\begin{abstract}
+Write your abstract here. 
+\end{abstract}
+
+%paragraphs
+\section{Introduction}
+The importance of dataspace systems has already been recognized and emphasized in handling heterogeneous data
+In many applications of big data, there is usually a large gap between the number of labeled examples needed to obtain high prediction accuracy,
+and the number of labeled examples that could be realistically obtained.
+These problems can be found in social networks.
+In the meanwhile, however, usually a large amount of labeled data sets can be collected from related applications of various types,
+such as, labeled documents in social tagging systems (e.g., wikipedia, ODP)
+for web mining and classified images from social sites such as Flickr.
+This talk will show examples about how free labeled heterogeneous source data
+provide useful supervision to a related target task.
+
+Three challenging sub-issues need to be solved:
+\begin{enumerate}
+  \item The source data may be generated from a different feature space from the target data (e.g., source is text data while target is image data).
+  \item The source data may be drawn from a distribution different from the target data.
+  For example, the source data is dominated by a Gaussian distribution while the target data is dominated by a multinomial distribution, which violates the i.i.d. assumption.
+  \item The source and target data may have totally different output spaces.
+\end{enumerate}
+
+
+
+\begin{thebibliography}{99}
+\bibitem{caruana97} R. Caruana, Multitask learning. Machine Learning 28(1) 41-75, 1997.
+\bibitem{pan09} S. J. Pan and Q. Yang, A Survey on Transfer Learning. Technical Report HKUST-CS08-08,
+Hong Kong University of Science and Technology, 2009.
+\bibitem{shi10} X. Shi, Q. Liu, W. Fan, Q. Yang, and P. S. Yu,
+Predictive Modeling with Heterogeneous Sources. In Proc. of SDM¡¯10, 2010.
+\end{thebibliography}
+
+
+
+
+
+
+\end{document}
